@@ -301,3 +301,34 @@
  .playlist-detail .trackname b{font-size:15px}
  .playlist-detail .trackname small{font-size:12px}
 }
+
+
+/* Final compact sizing pass — refined mobile playlist controls */
+@media(max-width:620px){
+ .playlist-detail-top{height:50px}
+ .playlist-back,.playlist-more{width:34px;height:34px;min-width:34px;min-height:34px}
+ .playlist-back svg{width:18px;height:18px}
+ .playlist-heading{padding:14px 0 5px}
+ .playlist-heading h1{font-size:clamp(29px,7.5vw,39px);letter-spacing:-1.4px}
+ .playlist-heading p{font-size:12px;margin-top:6px}
+ .playlist-actions{gap:10px;padding:9px 0 13px}
+ .playlist-art-stack{width:54px;height:54px}
+ .playlist-download,.playlist-shuffle{width:32px;height:34px;min-width:32px;min-height:34px;padding:4px}
+ .playlist-download svg,.playlist-shuffle svg{width:20px;height:20px}
+ .playlist-play{width:52px;height:52px;min-width:52px;min-height:52px}
+ .playlist-play svg{width:23px;height:23px}
+ .playlist-tags{gap:7px;padding:3px 16px 14px}
+ .playlist-tags span{padding:7px 12px;font-size:11px}
+ .playlist-add-row{padding:9px 0}
+ .playlist-add-row button{gap:11px}
+ .playlist-add-row button>svg{width:42px;height:42px;min-width:42px;min-height:42px;padding:10px}
+ .playlist-add-row b{font-size:14px}
+ .playlist-detail .track{gap:8px;min-height:58px;padding:5px 0}
+ .track-cover{width:44px;height:44px}
+ .track-cover svg{width:19px;height:19px}
+ .playlist-detail .trackname b{font-size:13px}
+ .playlist-detail .trackname small{font-size:11px}
+ .playlist-detail .heart{padding:3px}
+ .playlist-detail .heart svg{width:15px;height:15px}
+ .playlist-library-add h2{font-size:17px}
+}
