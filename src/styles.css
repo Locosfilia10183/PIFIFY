@@ -355,3 +355,6 @@
 .playlist-privacy input{accent-color:#8e9ecb}
 .custom-playlist-art{position:relative!important;inset:auto!important;transform:none!important;z-index:1!important;width:100%;height:100%;border-radius:7px}
 @media(max-width:620px){.playlist-manage{padding:11px;margin:14px 0 20px}.playlist-manage-actions button{padding:7px 9px;font-size:11px}}
+
+/* Playlist multi-select and drag sorting */
+.playlist-selection{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0;padding:10px 12px;border:1px solid var(--line);background:#ffffff08}.playlist-selection span{font:10px 'DM Mono';color:#aeb4bd;margin-right:auto}.playlist-selection button{border:1px solid #ffffff24;background:#ffffff08;color:#d8dce2;padding:7px 9px;font:9px 'DM Mono';cursor:pointer}.playlist-selection button:disabled{opacity:.35;cursor:default}.track-select{width:22px;min-width:22px;height:26px;display:grid;place-items:center;color:#aeb5bf;font-size:17px;padding:0}.track-select[aria-pressed=true]{color:#fff}.track-selected{background:#ffffff0b}.track-dragging{opacity:.42;border:1px dashed #aeb5bf}.selected-playlist .track[draggable=true]{cursor:grab}.selected-playlist .track[draggable=true]:active{cursor:grabbing}
