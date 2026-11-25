@@ -229,3 +229,75 @@
  .playlist-add-row button>svg{width:54px;height:54px}
  .playlist-add-row b{font-size:16px}
 }
+
+
+/* PIFIFY playlist screen — Spotify layout, original black starfield identity */
+.playlist-detail{
+ position:relative;isolation:isolate;min-height:calc(100dvh - 130px);
+ margin:0 -16px 30px;padding:0 16px 32px;overflow:hidden;
+ background:#08090d;color:#f7f8fb
+}
+.playlist-detail:before{
+ content:"";position:absolute;z-index:-2;inset:0 0 auto;height:460px;
+ background:radial-gradient(ellipse at 50% 0%,#27304a 0%,#171d30 32%,#0b0d14 68%,transparent 100%)
+}
+.playlist-detail:after{
+ content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.55;
+ background-image:radial-gradient(1px 1px at 8% 9%,#fff 99%,transparent),radial-gradient(1px 1px at 22% 24%,#b8c8ff 99%,transparent),radial-gradient(1px 1px at 76% 13%,#fff 99%,transparent),radial-gradient(1.5px 1.5px at 91% 31%,#d7ddff 99%,transparent),radial-gradient(1px 1px at 48% 18%,#fff 99%,transparent),radial-gradient(1px 1px at 64% 42%,#fff 99%,transparent),radial-gradient(1px 1px at 14% 44%,#fff 99%,transparent),radial-gradient(1px 1px at 83% 52%,#b8c8ff 99%,transparent);
+ background-size:260px 220px
+}
+.playlist-detail-top{height:58px;position:relative;z-index:1}
+.playlist-detail-top>span{font:9px 'DM Mono';letter-spacing:2px;color:#c5cada}
+.playlist-back{width:42px;height:42px;border:1px solid #ffffff2a;background:#ffffff12;backdrop-filter:blur(12px)}
+.playlist-more{background:transparent;color:#d7dbea}
+.playlist-heading{padding:22px 0 8px}
+.playlist-heading h1{font-size:clamp(34px,8vw,48px);font-weight:800;letter-spacing:-2px;line-height:1.02;margin:0;text-shadow:0 3px 25px #0008;overflow-wrap:anywhere}
+.playlist-heading p{font-size:15px;color:#b7bdcc;margin:9px 0 0}
+.playlist-actions{padding:14px 0 18px;gap:17px}
+.playlist-art-stack{width:72px;height:72px;margin-right:2px}
+.playlist-art{border-radius:7px;background:linear-gradient(145deg,#252d42,#090b12);border:2px solid #d5dcff;box-shadow:0 8px 25px #0009}
+.playlist-art.art-1{transform:translate(7px,-4px) rotate(4deg);z-index:-1}
+.playlist-art.art-2{transform:translate(13px,-8px) rotate(8deg);z-index:-2}
+.playlist-download{color:#65dc7c;border-radius:50%;background:#65dc7c18}
+.playlist-download:disabled{opacity:.75}
+.playlist-shuffle{color:#b8bdca}
+.playlist-shuffle.active{color:#65dc7c}
+.playlist-play{width:72px;height:72px;background:#65dc7c;box-shadow:0 7px 26px #65dc7c30;transition:transform .15s}
+.playlist-play:active{transform:scale(.94)}
+.playlist-tags{padding:5px 0 19px}
+.playlist-tags span{background:#24262d;border:1px solid #ffffff0b;color:#f1f2f6;border-radius:30px;padding:10px 17px;font-size:14px}
+.playlist-add-row{border-top:1px solid #ffffff12;padding:14px 0}
+.playlist-add-row button>svg{background:#202127;color:#c3c7d1;border:1px solid #ffffff0b}
+.playlist-add-row b{font-size:17px;font-weight:600}
+.playlist-detail .tracklist{margin-top:2px}
+.playlist-detail .track{display:flex;align-items:center;gap:12px;min-height:68px;padding:7px 0;border-bottom:1px solid #ffffff0a}
+.playlist-detail .track-number{width:14px;flex:none;color:#777f90;font:10px 'DM Mono';text-align:center}
+.track-cover{width:54px;height:54px;flex:none;display:grid;place-items:center;overflow:hidden;border:0;border-radius:5px;background:linear-gradient(145deg,#30394d,#11141c);color:#aab2c4;padding:0}
+.track-cover img{width:100%;height:100%;object-fit:cover}
+.track-cover svg{width:24px;height:24px}
+.playlist-detail .trackname{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:5px;text-align:left;background:transparent;border:0;padding:0;color:#fff}
+.playlist-detail .trackname b{font-size:16px;font-weight:500;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.playlist-detail .trackname small{font-size:13px;color:#a9adba;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.playlist-detail .heart,.playlist-detail .playrow{flex:none;background:transparent;border:0;color:#9da4b3;padding:5px}
+.playlist-detail .heart svg{width:17px;height:17px}
+.playlist-detail .track .remove-track{color:#f08b91}
+.playlist-library-add{margin-top:32px;padding-top:20px;border-top:1px solid #ffffff18}
+.playlist-library-add h2{font-size:20px;margin:0 0 12px}
+.playlist-library-add .track{min-height:58px}
+.playlist-library-add .track-cover{width:46px;height:46px}
+@media(max-width:620px){
+ .playlist-detail{margin:0 -16px 25px;padding:0 16px calc(24px + env(safe-area-inset-bottom))}
+ .playlist-detail:before{height:490px;background:radial-gradient(ellipse at 48% 0%,#29324d 0%,#171e32 34%,#0b0d14 72%,transparent 100%)}
+ .playlist-detail-top{height:58px}
+ .playlist-heading{padding:18px 0 8px}
+ .playlist-heading h1{font-size:clamp(35px,9vw,47px)}
+ .playlist-actions{gap:14px;padding:13px 0 17px}
+ .playlist-art-stack{width:64px;height:64px}
+ .playlist-play{width:64px;height:64px}
+ .playlist-download,.playlist-shuffle{width:38px;height:42px}
+ .playlist-tags{margin:0 -16px;padding:5px 16px 19px}
+ .playlist-detail .track{gap:10px;min-height:68px}
+ .track-cover{width:52px;height:52px}
+ .playlist-detail .trackname b{font-size:15px}
+ .playlist-detail .trackname small{font-size:12px}
+}
