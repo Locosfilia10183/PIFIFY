@@ -168,3 +168,7 @@
 .favorites-card{border-color:#ffffff35;background:linear-gradient(135deg,#352b43,#17191a)}
 .favorites-card>svg{color:#f4a4c5}
 .favorites-card.selected{border-color:#f4a4c5;box-shadow:0 0 0 1px #f4a4c533}
+
+.track .reorder:disabled{opacity:.22;cursor:default}
+.track .remove-track{color:#f08b91}
+.track .reorder svg,.track .remove-track svg{width:15px;height:15px}
