@@ -25,3 +25,20 @@
 .volume svg{width:16px;height:16px;flex:none}
 .player-expanded .playerlabel{position:absolute;right:18px;top:7px}
 @media(max-width:760px){.player-expanded{grid-template-columns:minmax(0,1fr) auto;gap:7px 12px;padding:12px 14px 10px}.player-expanded .now{min-width:0}.player-main{grid-column:1 / -1;grid-row:2;gap:5px}.player-expanded .controls{gap:clamp(12px,5vw,25px)}.player-expanded .controls button svg{width:17px;height:17px}.player-expanded .controls .play svg{width:21px;height:21px}.volume{grid-column:2;grid-row:1;max-width:95px}.volume input{width:55px}.player-expanded .playerlabel{display:none}.timeline{gap:6px}.timeline span{font-size:8px}}
+
+
+/* Track detail sheet */
+.detail-backdrop{position:fixed;inset:0;z-index:80;background:#000b;backdrop-filter:blur(12px);display:flex;align-items:flex-end;justify-content:center;padding:18px}
+.detail-sheet{position:relative;width:min(100%,620px);max-height:min(88dvh,900px);overflow:auto;background:linear-gradient(150deg,#171b20,#070809 72%);border:1px solid #ffffff24;padding:30px;border-radius:12px 12px 5px 5px;box-shadow:0 20px 90px #000c}
+.detail-close{position:absolute;right:16px;top:16px;width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);background:#ffffff08;color:#eee;border-radius:50%}
+.detail-art{width:150px;height:150px;margin:10px auto 25px;display:grid;place-items:center;border:1px solid #ffffff25;border-radius:10px;background:radial-gradient(circle at 35% 30%,#aeb5bf,#343b44 45%,#090a0b 78%);color:#f2f4f6;box-shadow:0 14px 45px #0008}
+.detail-sheet>.eyebrow{display:block;text-align:center}
+.detail-sheet>h2{text-align:center;font-size:clamp(27px,5vw,38px);margin:10px 0 4px}
+.detail-artist{text-align:center;color:#aeb3bb;margin:0 0 24px}
+.detail-meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.detail-meta>div{padding:15px;border:1px solid var(--line);background:#ffffff06;display:flex;flex-direction:column;gap:7px;min-width:0}
+.detail-meta small{font:9px 'DM Mono';letter-spacing:1px;color:#9299a3}
+.detail-meta b{font-size:12px;overflow-wrap:anywhere}
+.detail-play{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;margin:18px 0 28px}
+.detail-sheet .sectionhead{margin-top:22px}
+@media(max-width:620px){.detail-backdrop{padding:0}.detail-sheet{width:100%;max-height:88dvh;padding:25px 18px calc(25px + env(safe-area-inset-bottom));border-radius:16px 16px 0 0}.detail-art{width:128px;height:128px}.detail-meta{gap:8px}.detail-meta>div{padding:12px}}
