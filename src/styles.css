@@ -120,3 +120,39 @@
   .bottomnav svg{width:23px;height:23px}
   .bottomnav small{font-size:10px;font-weight:600}
 }
+
+/* Spotify-inspired now-playing screen */
+.now-open{border:0;background:transparent;text-align:left;cursor:pointer;min-width:0;padding:0}
+.full-player{position:fixed;z-index:100;inset:0;min-height:100dvh;overflow-y:auto;padding:calc(18px + env(safe-area-inset-top)) 22px calc(24px + env(safe-area-inset-bottom));background:radial-gradient(ellipse at 50% 8%,#45534d 0,#29332f 45%,#111513 100%);display:flex;flex-direction:column;color:#fff}
+.full-player-top{height:48px;display:grid;grid-template-columns:44px 1fr 44px;align-items:center;text-align:center;flex:none;margin-bottom:22px}
+.full-player-top button{width:42px;height:42px;display:grid;place-items:center;background:transparent;border:0;color:#fff}
+.full-player-top button svg{width:26px;height:26px}
+.full-player-top small,.full-player-top b{display:block}
+.full-player-top small{font:9px 'DM Mono';letter-spacing:1.3px;opacity:.65;margin-bottom:3px}
+.full-player-top b{font-size:13px}
+.full-cover{width:min(100%,min(74vw,430px));aspect-ratio:1;margin:0 auto 28px;display:grid;place-items:center;overflow:hidden;border-radius:7px;background:linear-gradient(145deg,#4c5651,#111614);box-shadow:0 18px 55px #0005}
+.full-cover img{width:100%;height:100%;object-fit:cover}
+.full-cover-fallback{width:100%;height:100%;display:grid;place-items:center;background:radial-gradient(circle at 35% 25%,#aeb5bf,#414a48 42%,#101513 78%)}
+.full-cover-fallback svg{width:30%;height:30%;opacity:.7}
+.full-track-meta{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 auto 24px;width:min(100%,560px)}
+.full-track-meta>div{min-width:0}
+.full-track-meta b,.full-track-meta small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.full-track-meta b{font-size:clamp(22px,5vw,30px);letter-spacing:-.8px}
+.full-track-meta small{font-size:15px;color:#d0d5d1;margin-top:5px}
+.full-like{border:0;background:transparent;color:#1ed760;padding:10px}
+.full-like svg{width:26px;height:26px}
+.full-timeline{width:min(100%,560px);margin:0 auto 24px}
+.full-timeline input{width:100%;height:4px;accent-color:#fff;display:block}
+.full-timeline>div{display:flex;justify-content:space-between;color:#d0d5d1;font-size:11px;margin-top:8px;font-variant-numeric:tabular-nums}
+.full-controls{width:min(100%,560px);margin:0 auto 28px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.full-controls button{position:relative;display:grid;place-items:center;border:0;background:transparent;color:#fff;padding:8px}
+.full-controls button svg{width:25px;height:25px}
+.full-controls button.mode-active{color:#1ed760}
+.full-controls button small{position:absolute;right:0;bottom:1px;font:9px 'DM Mono'}
+.full-controls .full-play{width:68px;height:68px;border-radius:50%;background:#fff;color:#111}
+.full-controls .full-play svg{width:32px;height:32px}
+.full-bottom{width:min(100%,560px);margin:auto auto 0;display:flex;justify-content:space-between;border-top:1px solid #ffffff25;padding-top:16px}
+.full-bottom button{display:flex;align-items:center;gap:8px;background:transparent;border:0;color:#d8dfda;font-size:12px}
+.full-bottom svg{width:18px;height:18px}
+@media(max-width:620px){.full-player{padding-left:22px;padding-right:22px}.full-cover{width:min(100%,calc(100vw - 44px));margin-bottom:26px}.full-player-top{margin-bottom:26px}.full-controls{margin-bottom:30px}}
+@media(min-width:621px){.full-player{align-items:center}.full-player-top,.full-cover,.full-track-meta,.full-timeline,.full-controls,.full-bottom{width:min(100%,560px)}}
