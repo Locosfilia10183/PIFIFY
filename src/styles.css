@@ -172,3 +172,60 @@
 .track .reorder:disabled{opacity:.22;cursor:default}
 .track .remove-track{color:#f08b91}
 .track .reorder svg,.track .remove-track svg{width:15px;height:15px}
+
+
+/* Playlist detail — immersive Spotify-style layout */
+.playlist-detail{margin:0 -16px 34px;padding:0 16px 22px;background:#101010;color:#fff;overflow:hidden}
+.playlist-detail-top{height:54px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.playlist-detail-top>span{font:9px 'DM Mono';letter-spacing:1.8px;color:#d6d9e5}
+.playlist-back,.playlist-more{width:38px;height:38px;border:0;border-radius:50%;display:grid;place-items:center;background:#ffffff1c;color:#fff}
+.playlist-back svg{width:22px;height:22px}
+.playlist-more{font-size:20px;letter-spacing:2px}
+.playlist-detail-hero{display:flex;align-items:flex-end;gap:18px;padding:20px 0 12px;background:linear-gradient(180deg,transparent,#101010)}
+.playlist-art-stack{position:relative;width:116px;height:116px;flex:none}
+.playlist-art{position:absolute;inset:0;width:100%;height:100%;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#394c86,#111722);border:1px solid #ffffff55;box-shadow:0 8px 22px #0007}
+.playlist-art svg{width:35%;height:35%;opacity:.75}
+.playlist-art img{width:100%;height:100%;object-fit:cover}
+.playlist-art.art-1{transform:translate(7px,-5px) rotate(4deg);z-index:-1;opacity:.8}
+.playlist-art.art-2{transform:translate(13px,-10px) rotate(8deg);z-index:-2;opacity:.55}
+.playlist-art.art-empty{position:relative}
+.playlist-detail-copy{min-width:0;padding-bottom:2px}
+.playlist-detail-copy>small{font:9px 'DM Mono';letter-spacing:1.3px;color:#c6ccdb}
+.playlist-detail-copy h1{font-size:clamp(28px,6vw,44px);line-height:1.02;letter-spacing:-1.8px;margin:8px 0}
+.playlist-detail-copy p{font-size:13px;color:#c2c5ce;margin:0}
+.playlist-actions{display:flex;align-items:center;gap:16px;padding:12px 0 16px}
+.playlist-mini-art{width:54px;height:54px;display:grid;place-items:center;overflow:hidden;background:#252a30;color:#c5cad2;border:1px solid #ffffff25}
+.playlist-mini-art img{width:100%;height:100%;object-fit:cover}
+.playlist-mini-art svg{width:25px;height:25px}
+.playlist-download,.playlist-shuffle{width:42px;height:42px;display:grid;place-items:center;border:0;background:transparent;color:#aeb3bb}
+.playlist-download:disabled{opacity:1;color:#62d879}
+.playlist-download svg{width:26px;height:26px}
+.playlist-action-spacer{flex:1}
+.playlist-shuffle.active{color:#62d879}
+.playlist-shuffle svg{width:26px;height:26px}
+.playlist-play{width:62px;height:62px;border:0;border-radius:50%;display:grid;place-items:center;background:#62d879;color:#07100a}
+.playlist-play svg{width:29px;height:29px}
+.playlist-tags{display:flex;gap:9px;overflow-x:auto;padding:3px 0 18px;scrollbar-width:none}
+.playlist-tags::-webkit-scrollbar{display:none}
+.playlist-tags span{flex:none;padding:10px 16px;border-radius:30px;background:#292929;color:#f1f1f1;font-size:13px}
+.playlist-add-row{padding:12px 0 14px;border-top:1px solid #ffffff12}
+.playlist-add-row button{display:flex;align-items:center;gap:14px;width:100%;padding:0;border:0;background:transparent;color:#fff;text-align:left}
+.playlist-add-row button>svg{width:54px;height:54px;padding:13px;background:#242424;color:#c4c4c4}
+.playlist-add-row b{font-size:16px;font-weight:600}
+.playlist-detail .selected-playlist{margin:0}
+.playlist-detail .track{border-bottom:1px solid #ffffff08}
+#playlist-add-tracks{scroll-margin-top:18px}
+@media(max-width:620px){
+ .playlist-detail{margin:0 -16px 30px;padding:0 16px 18px;background:linear-gradient(180deg,#3f58df 0,#26366f 170px,#101010 385px,#101010 100%)}
+ .playlist-detail-top{height:54px}
+ .playlist-detail-hero{min-height:175px;gap:18px;padding:20px 0 12px}
+ .playlist-art-stack{width:96px;height:96px}
+ .playlist-detail-copy h1{font-size:clamp(26px,7vw,36px);letter-spacing:-1.3px}
+ .playlist-detail-copy p{font-size:13px}
+ .playlist-actions{gap:12px;padding:12px 0 15px}
+ .playlist-mini-art{width:50px;height:50px}
+ .playlist-play{width:58px;height:58px}
+ .playlist-tags{margin:0 -16px;padding:3px 16px 17px}
+ .playlist-add-row button>svg{width:54px;height:54px}
+ .playlist-add-row b{font-size:16px}
+}
