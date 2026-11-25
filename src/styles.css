@@ -8,3 +8,20 @@
 .auth-resend{background:transparent;border:1px solid var(--line);color:#aeb3bb;padding:12px;font:10px 'DM Mono';letter-spacing:.5px;width:100%;cursor:pointer}.auth-resend:active{background:#ffffff12}
 
 .profile-avatar{width:82px;height:82px;border-radius:50%;border:1px solid #ffffff35;background:radial-gradient(circle at 35% 30%,#9ca3ad,#252a31 65%,#090a0b);display:grid;place-items:center;overflow:hidden;color:#e5e7eb;margin:6px 0 10px}.profile-avatar img{width:100%;height:100%;object-fit:cover}
+
+
+/* PIFIFY Player 2.0 */
+.player-expanded{display:grid;grid-template-columns:minmax(150px,1fr) minmax(240px,1.4fr) minmax(90px,.55fr);align-items:center;gap:24px}
+.player-main{min-width:0;display:flex;flex-direction:column;gap:9px}
+.player-expanded .controls{display:flex;align-items:center;justify-content:center;gap:13px}
+.player-expanded .controls button{position:relative}
+.player-expanded .controls button.mode-active{color:#fff;filter:drop-shadow(0 0 5px #fff8)}
+.player-expanded .controls button>small{position:absolute;font:8px 'DM Mono';right:-2px;bottom:-4px}
+.timeline{display:grid;grid-template-columns:34px minmax(0,1fr) 34px;align-items:center;gap:8px}
+.timeline span{font:9px 'DM Mono';color:#9299a3;text-align:center;font-variant-numeric:tabular-nums}
+.timeline input,.volume input{width:100%;accent-color:#e8eaed;cursor:pointer;height:4px}
+.timeline input:disabled{opacity:.25;cursor:default}
+.volume{display:flex;align-items:center;gap:10px;color:#aeb3bb}
+.volume svg{width:16px;height:16px;flex:none}
+.player-expanded .playerlabel{position:absolute;right:18px;top:7px}
+@media(max-width:760px){.player-expanded{grid-template-columns:minmax(0,1fr) auto;gap:7px 12px;padding:12px 14px 10px}.player-expanded .now{min-width:0}.player-main{grid-column:1 / -1;grid-row:2;gap:5px}.player-expanded .controls{gap:clamp(12px,5vw,25px)}.player-expanded .controls button svg{width:17px;height:17px}.player-expanded .controls .play svg{width:21px;height:21px}.volume{grid-column:2;grid-row:1;max-width:95px}.volume input{width:55px}.player-expanded .playerlabel{display:none}.timeline{gap:6px}.timeline span{font-size:8px}}
