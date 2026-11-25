@@ -156,3 +156,11 @@
 .full-bottom svg{width:18px;height:18px}
 @media(max-width:620px){.full-player{padding-left:22px;padding-right:22px}.full-cover{width:min(100%,calc(100vw - 44px));margin-bottom:26px}.full-player-top{margin-bottom:26px}.full-controls{margin-bottom:30px}}
 @media(min-width:621px){.full-player{align-items:center}.full-player-top,.full-cover,.full-track-meta,.full-timeline,.full-controls,.full-bottom{width:min(100%,560px)}}
+
+.spotify-search-link{display:flex;align-items:center;gap:13px;margin:16px 0 24px;padding:14px 16px;border:1px solid #ffffff20;border-radius:9px;background:#141715;color:#fff;text-decoration:none;transition:background .2s,border-color .2s}
+.spotify-search-link:active{background:#202820;border-color:#1ed760}
+.spotify-mark{width:36px;height:36px;flex:none;border-radius:50%;display:grid;place-items:center;background:#1ed760;color:#101510;font-size:23px;line-height:1}
+.spotify-search-link span:nth-child(2){display:flex;flex:1;min-width:0;flex-direction:column;gap:4px}
+.spotify-search-link b{font-size:14px}
+.spotify-search-link small{font-size:11px;color:#a5aaa6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.spotify-arrow{font-size:19px;color:#1ed760}
