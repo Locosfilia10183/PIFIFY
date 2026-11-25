@@ -50,3 +50,49 @@
 
 /* Audius playable search action */
 .catalog-play{width:38px;height:38px;flex:none;display:grid;place-items:center;background:#eee;color:#08090a;border:0;border-radius:50%}.catalog-play svg{fill:currentColor}
+
+/* PIFIFY mobile redesign — Spotify-inspired compact navigation */
+@media(max-width:620px){
+  body{background:#080808}
+  .app{background:#080808;overflow-x:hidden}
+  main{padding:0 16px calc(142px + env(safe-area-inset-bottom))}
+  header{height:48px;border:0;justify-content:flex-start}
+  header>span{font-size:10px;letter-spacing:1.4px}
+  .menubtn{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:#242424;border:0}
+  .sidebar{z-index:30;box-shadow:18px 0 60px #000b}
+  .hero{padding:24px 0 12px;min-height:0}
+  .hero h1{font-size:43px;letter-spacing:-2.8px}
+  .hero p{max-width:260px}
+  .orb{height:145px}
+  .planet{width:88px;height:88px}
+  .orbit{width:190px;height:65px}
+  .sectionhead{margin:27px 0 14px}
+  .sectionhead h2{font-size:21px;letter-spacing:-.6px}
+  .cards{display:flex;overflow-x:auto;gap:14px;padding:0 1px 10px;scroll-snap-type:x mandatory}
+  .album{flex:0 0 145px;scroll-snap-align:start}
+  .cover{border-radius:7px;overflow:hidden}
+  .album b{font-size:12px}
+  .album small{font-size:10px}
+  .pagetitle{padding:32px 0 18px}
+  .pagetitle h1{font-size:42px}
+  .tracklist,.external-results{max-width:none}
+  .player.player-expanded{position:fixed;z-index:18;left:8px;right:8px;bottom:calc(66px + env(safe-area-inset-bottom));height:56px;min-height:56px;padding:6px 10px;border:1px solid #ffffff22;border-radius:7px;background:#252a30f5;backdrop-filter:blur(22px);display:flex;align-items:center;gap:10px;box-shadow:0 5px 25px #0009}
+  .player .now{flex:1;min-width:0;gap:9px}
+  .player .mini{width:40px;height:40px;flex:none;border-radius:3px}
+  .player .now>svg{width:32px;height:32px;flex:none}
+  .player .now b{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:210px}
+  .player .now small{font-size:9px}
+  .player-main{display:block;position:static;flex:none}
+  .player-expanded .controls{display:flex;gap:0}
+  .player-expanded .controls button{display:none}
+  .player-expanded .controls .play{display:grid;width:38px;height:38px;background:transparent;color:#fff}
+  .player-expanded .controls .play svg{width:21px;height:21px}
+  .timeline,.volume,.playerlabel{display:none!important}
+  .bottomnav{position:fixed;z-index:19;left:0;right:0;bottom:0;height:calc(64px + env(safe-area-inset-bottom));padding:5px 4px env(safe-area-inset-bottom);background:#080808f7;border:0;border-top:1px solid #ffffff14;backdrop-filter:blur(22px);display:flex;justify-content:space-around;align-items:center}
+  .bottomnav button{flex:1;min-width:0;height:52px;gap:4px;color:#a7a7a7;background:transparent;border:0}
+  .bottomnav button.active{color:#fff}
+  .bottomnav svg{width:23px;height:23px;stroke-width:2}
+  .bottomnav small{font-size:10px;font-weight:600}
+  footer{margin-top:35px}
+  .stars{opacity:.13}
+}
