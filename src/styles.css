@@ -332,3 +332,14 @@
  .playlist-detail .heart svg{width:15px;height:15px}
  .playlist-library-add h2{font-size:17px}
 }
+
+
+/* Compact inline playlist rename */
+.playlist-rename{display:flex;align-items:center;gap:7px;max-width:100%}
+.playlist-rename input{width:min(100%,320px);min-width:0;padding:9px 11px;border:1px solid #aab5d655;border-radius:6px;background:#11141d;color:#fff;font:700 25px Manrope;letter-spacing:-.8px;outline:none}
+.playlist-rename input:focus{border-color:#aab5d6}
+.playlist-rename button{width:34px;height:34px;flex:none;display:grid;place-items:center;border:1px solid #ffffff25;border-radius:50%;background:#ffffff12;color:#fff}
+.playlist-rename button svg{width:17px;height:17px}
+.playlist-more{width:34px;height:34px;min-width:34px;min-height:34px}
+.playlist-more svg{width:16px;height:16px}
+@media(max-width:620px){.playlist-rename input{font-size:20px;padding:8px 9px}.playlist-rename button{width:32px;height:32px}}
